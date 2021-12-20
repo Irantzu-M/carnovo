@@ -1,0 +1,6 @@
+@import "/src/scss/base";
+svg {
+    width: $font-size-base * 2.25;
+    height: $font-size-base * 2.25;
+    fill: $primary;
+}

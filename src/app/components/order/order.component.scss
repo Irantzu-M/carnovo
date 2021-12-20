@@ -1,0 +1,22 @@
+@import "/src/scss/base";
+.order {
+    @include display(flex);
+    @include justify-content(space-between);
+    padding: map-get($spacers, 3 ) 0;
+    .orderable {
+        @include display(flex);
+        @include wrap;
+        @include align-items(center);
+        margin-right: map-get($spacers, 3 );
+        &-field {
+            margin-right: map-get($spacers, 1 );
+            font-size: $btn-font-size;
+            font-weight: $font-weight-bold;
+        }
+        &-buttons {
+            @include display(flex);
+            @include wrap;
+            @include flex-direction(column);
+        }
+    }
+}

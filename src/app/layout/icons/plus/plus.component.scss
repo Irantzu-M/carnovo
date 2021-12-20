@@ -1,0 +1,13 @@
+@import "/src/scss/base";
+
+#carnovo-plus {
+    border-radius: 100vh;
+    fill: $white;
+    background-color: $primary;
+}
+
+svg {
+    width: $font-size-base * 2.25;
+    height: $font-size-base * 2.25;
+    fill: $primary;
+}

@@ -1,0 +1,29 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $gray-200;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $gray-400;
+    &:hover {
+        background: $gray-600;
+    }
+}

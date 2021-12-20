@@ -1,0 +1,17 @@
+@import "/src/scss/base";
+
+.toolbar {
+    @include boxshadow($default-box-shadow);
+    background-color: $white;
+    .row {
+        @include align-items(center);
+    }
+    ul {
+        @include justify-content(space-between);
+        width: 100%;
+        padding-top: map-get($spacers, 2 );
+    }
+    .icon-add {
+        @include transform(translate(0, calc(-50% - map-get($spacers, 2))));
+    }
+}
