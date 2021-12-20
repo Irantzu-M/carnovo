@@ -1,0 +1,22 @@
+@import "/src/scss/base";
+:host {
+    @include display(flex);
+    @include align-items(center);
+    color: $primary;
+    a {
+        @include display(flex);
+        @include align-items(center);
+        font-size: $btn-font-size;
+
+    }
+    app-plus {
+        margin-right: map-get($spacers, 2 );
+    }
+    ::ng-deep {
+        #carnovo-plus {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+}

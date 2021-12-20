@@ -1,0 +1,231 @@
+//GENERAL
+@mixin display($value) {
+    @if $value==flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    @else {
+        display: $value;
+    }
+}
+
+@mixin wrap($value:wrap) {
+    -webkit-flex-wrap: $value;
+    -moz-flex-wrap: $value;
+    @if $value==nowrap {
+        -ms-flex-wrap: none;
+    }
+    @else {
+        -ms-flex-wrap: $value;
+    }
+    flex-wrap: $value;
+}
+
+@mixin flex-flow($values: (row nowrap)) {
+    -webkit-flex-flow: $values;
+    -moz-flex-flow: $values;
+    -ms-flex-flow: $values;
+    flex-flow: $values;
+}
+
+@mixin order($value: 0) {
+    -webkit-box-ordinal-group: $value + 1;
+    -webkit-order: $value;
+    -moz-order: $value;
+    -ms-flex-order: $value;
+    order: $value;
+}
+
+@mixin flex-grow($value: 0) {
+    -webkit-box-flex: $value;
+    -webkit-flex-grow: $value;
+    -moz-flex-grow: $value;
+    -ms-flex-positive: $value;
+    flex-grow: $value;
+}
+
+// row (default) | row-reverse | column | column-reverse
+@mixin flex-direction($direction: row) {
+  @if $direction == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+       -moz-box-direction: reverse;
+       -moz-box-orient: horizontal;
+  } @else if $direction == column {
+    -webkit-box-direction: normal;
+     -webkit-box-orient: vertical;
+       -moz-box-direction: normal;
+        -moz-box-orient: vertical;
+  } @else if $direction == column-reverse {
+    -webkit-box-direction: reverse;
+      -webkit-box-orient: vertical;
+       -moz-box-direction: reverse;
+         -moz-box-orient: vertical;
+  } @else {
+     -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+        -moz-box-direction: normal;
+       -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+// flex-start | flex-end | center | space-between | space-around 
+@mixin justify-content($justify) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    justify-content: $justify;
+    -ms-flex-pack: $justify;
+}
+
+// flex-start | flex-end | center | space-between | space-around | stretch 
+@mixin align-content($align) {
+    -webkit-align-content: $align;
+    -moz-align-content: $align;
+    -ms-align-content: $align;
+    align-content: $align;
+}
+
+// flex-start | flex-end | center | baseline | stretch @mixin align-items($align) {
+@mixin align-items($align) {
+    -webkit-align-items: $align;
+    -moz-align-items: $align;
+    -ms-align-items: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
+}
+
+// auto | flex-start | flex-end | center | baseline | stretch 
+@mixin align-self($align) {
+    -webkit-align-self: $align;
+    -moz-align-self: $align;
+    -ms-align-self: $align;
+    align-self: $align;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin noapearance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+@mixin white-space($value) {
+    white-space: -moz-#{$value};
+    white-space: $value;
+}
+
+@mixin linear-gradient($args...) {
+    background: -o-linear-gradient($args);
+    background: -moz-linear-gradient($args);
+    background: -webkit-linear-gradient($args);
+    background: linear-gradient($args);
+}
+
+@mixin transform($transforms...) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin boxshadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin h1 {
+    font-size: $h1-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $h1-font-size-desktop;
+    }
+}
+@mixin h2 {
+    font-size: $h2-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $h2-font-size-desktop;
+    }
+}
+@mixin h3 {
+    font-size: $h3-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $h3-font-size-desktop;
+    }
+}
+@mixin h4 {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $h4-font-size-desktop;
+    }
+}
+@mixin h5 {
+    font-size: $h5-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $h5-font-size-desktop;
+    }
+}
+@mixin h6 {
+    font-size: $h6-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $h6-font-size-desktop;
+    }
+}
+@mixin large {
+    font-size: $large-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $large-font-size-desktop;
+    }
+}
+@mixin medium {
+    font-size: $medium-font-size;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(lg) {
+        font-size: $medium-font-size-desktop;
+    }
+}

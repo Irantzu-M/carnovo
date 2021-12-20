@@ -1,0 +1,20 @@
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Favourites</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="container-fluid">
+            <app-list-item></app-list-item>
+            <app-list-item></app-list-item>
+            <app-list-item></app-list-item>
+            <app-list-item></app-list-item>
+        </div>
+    </div>
+  </ng-template>
+  
+  <a href="#" (click)="open(content)">
+      <app-favourite></app-favourite>
+  </a>
