@@ -48,4 +48,9 @@ header {
             margin-bottom: 0;
         }
     }
+    ::ng-deep {
+        #carnovo-logo {
+            fill: $primary;
+        }
+    }
 }

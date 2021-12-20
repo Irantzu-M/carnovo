@@ -21,6 +21,8 @@ import { HomeComponent } from './layout/icons/home/home.component';
 import { FavouriteComponent } from './layout/icons/favourite/favourite.component';
 import { CartComponent } from './layout/icons/cart/cart.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ListItemComponent } from './components/list-item/list-item.component';
+import { NewCarComponent } from './pages/new-car/new-car.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { ModalComponent } from './components/modal/modal.component';
     HomeComponent,
     FavouriteComponent,
     CartComponent,
-    ModalComponent
+    ModalComponent,
+    ListItemComponent,
+    NewCarComponent
   ],
   imports: [
     BrowserModule,

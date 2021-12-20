@@ -1,0 +1,114 @@
+@import "/src/scss/base";
+.container {
+    padding: map-get($spacers, 6 ) 0 map-get($spacers, 4 );
+    h2 {
+        text-align: center;
+        padding: map-get($spacers, 5 ) 0 ;
+        
+    }
+    form {
+        padding: map-get($spacers, 5 ) map-get($spacers, 3 );
+        .form-group {
+            @include display(flex);
+            @include flex-flow(column);
+        }
+        .form-item {
+            margin-bottom: map-get($spacers, 4 );
+        }
+        label {
+            text-transform: uppercase;
+            color: $primary;
+        }
+        input[type="text"] {
+            @include boxshadow($default-box-shadow);
+            border: none;
+            padding: $font-size-base;
+        }
+        .field-toggler {
+            padding: map-get($spacers, 3 ) 0 ;
+            input {
+                position: absolute;
+                width: 0;
+                height: 0;
+                opacity: 0;
+                &:checked {
+                    & + label {
+                        &:before {
+                            background: $primary;
+                        }
+                        &:after {
+                            left: calc( $font-size-base * 2.5 - $font-size-base * 0.25 - $font-size-base * 0.9 );
+                        }
+                    }
+                }
+            }
+            label {
+                @include display(flex);
+                @include align-items(center);
+                position: relative;
+                cursor: pointer;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: $font-size-base * 2.5;
+                    height: $font-size-base * 1.5;
+                    border-radius: 100vh;
+                    background: $secondary;
+                    margin-right: map-get($spacers , 2 );
+                    @include transition(background 0.3s);
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    width: $font-size-base * 0.9;
+                    height: $font-size-base * 0.9;
+                    border-radius: 100vh;
+                    position: absolute;
+                    top: 50%;
+                    left: $font-size-base * 0.25;
+                    @include transform(translate(0, -50%));
+                    background-color: $white;
+                    @include transition(left 0.3s);
+                }
+            }
+
+        }
+        .field-file {
+            position: relative;
+            input {
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: $font-size-base * 0.5;
+                border: 2px dashed transparentize($primary, 0.6);
+                background-image: url('/assets/img/image-field.png');
+                background-repeat: no-repeat;
+                background-position: 50% 40%;
+                min-height: 15rem;
+
+            }
+            .field-help {
+                color: transparentize($primary, 0.6);
+                position: absolute;
+                top: 65%;
+                left: 50%;
+                @include transform(translate(-50%, 0));
+            }
+        }
+        .form-actions {
+            padding: map-get($spacers, 5 ) 0;
+            @include display(flex);
+            @include justify-content(center);
+        }
+    }
+}

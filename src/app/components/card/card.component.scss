@@ -34,8 +34,11 @@
         @include transition(transform 0.3s);
     }
     ::ng-deep {
-        #carnovo-favourite{
+        #carnovo-favourite {
             fill: $secondary;
         }
+    }
+    @include media-breakpoint-up(lg) {
+        padding: map-get($spacers, 4 );
     }
 }

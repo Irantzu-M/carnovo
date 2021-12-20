@@ -27,3 +27,28 @@ a {
         background: $gray-600;
     }
 }
+
+h1 {
+    @include h1;
+    color: $primary;
+}
+h2 {
+    @include h2;
+    color: $primary;
+}
+h3 {
+    @include h3;
+    color: $primary;
+}
+h4 {
+    @include h4;
+    color: $primary;
+}
+h5 {
+    @include h5;
+    color: $primary;
+}
+h6 {
+    @include h6;
+    color: $primary;
+}
