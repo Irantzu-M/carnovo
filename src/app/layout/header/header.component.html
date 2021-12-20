@@ -1,0 +1,34 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <app-logo></app-logo>
+                <h1 class="d-none">Carnovo</h1>
+            </a>
+            <div class="tools">
+                <ul class="d-lg-flex d-none">
+                    <li><a href="#">
+                        <app-search></app-search>
+                    </a></li>
+                    <li><a href="#">
+                        <app-modal></app-modal>
+                    </a></li>
+                    <li><a href="#">
+                        <app-cart></app-cart>
+                    </a></li>
+                </ul>
+                <a type="button" class="main-nav-toggler" (click)="collapse.toggle()"
+                    [attr.aria-expanded]="!isCollapsed" aria-controls="collapseNavbar">
+                    <app-menu></app-menu>
+                </a>
+            </div>
+            <div class="main-nav" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                <ul class="container">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

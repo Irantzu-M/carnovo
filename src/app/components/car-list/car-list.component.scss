@@ -1,0 +1,10 @@
+@import "/src/scss/base";
+.car-list {
+    @include display(flex);
+    @include wrap;
+    @include justify-content(center);
+    padding-bottom: map-get($spacers, 5 );
+    app-card {
+        width: 100%;
+    }
+}

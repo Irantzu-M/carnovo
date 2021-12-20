@@ -1,0 +1,36 @@
+@import "/src/scss/base";
+:host {
+    padding-top: map-get($spacers, 3 );
+    background-color: $primary;
+    * { 
+        color: $white;
+    }
+    .footer-top {
+        padding: map-get($spacers, 3 ) 0;
+        ul {
+            li {
+                margin-bottom: map-get($spacers, 2 );
+            }
+        }
+    }
+    .footer-down {
+        border-top: 1px solid transparentize( $white, 0.8 );
+        padding: map-get($spacers, 3 ) 0;
+        .policies {
+            display: block;
+            a {
+                &:not(:first-child) {
+                    padding-left: map-get($spacers, 3 );
+                    margin-left: map-get($spacers, 3 );
+                    border-left: 1px solid $white;
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        #carnovo-logo {
+            fill: $white;
+            margin-bottom: map-get($spacers, 3 );
+        }
+    }
+}

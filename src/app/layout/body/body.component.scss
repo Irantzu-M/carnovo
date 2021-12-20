@@ -1,0 +1,5 @@
+@import "/src/scss/base";
+:host {
+    display: block;
+    padding: map-get($spacers, 6 ) 0 0;
+}

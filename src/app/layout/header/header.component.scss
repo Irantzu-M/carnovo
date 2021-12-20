@@ -1,0 +1,56 @@
+@import "/src/scss/base";
+:host {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+header {
+    .navbar {
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(space-between);
+        @include wrap;
+        position: relative;
+        width: 100%;
+        background-color: $white;
+        @include boxshadow($default-box-shadow);
+        .main-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            padding: map-get($spacers, 3 );
+            background-color: $primary;
+            z-index: 2;
+            ul {
+                @include align-content(center);
+                padding-top: map-get($spacers, 5 );
+                height: 100%;
+                li {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: map-get($spacers, 3 );
+                }
+            }
+            a {
+                color: $white;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+    .tools {
+        @include display(flex);
+        @include align-items(center);
+        ul {
+            margin-bottom: 0;
+        }
+    }
+    ::ng-deep {
+        #carnovo-logo {
+            fill: $primary;
+        }
+    }
+}

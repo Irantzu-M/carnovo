@@ -1,0 +1,54 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $gray-200;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $gray-400;
+    &:hover {
+        background: $gray-600;
+    }
+}
+
+h1 {
+    @include h1;
+    color: $primary;
+}
+h2 {
+    @include h2;
+    color: $primary;
+}
+h3 {
+    @include h3;
+    color: $primary;
+}
+h4 {
+    @include h4;
+    color: $primary;
+}
+h5 {
+    @include h5;
+    color: $primary;
+}
+h6 {
+    @include h6;
+    color: $primary;
+}

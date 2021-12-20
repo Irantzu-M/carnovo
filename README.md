@@ -1,3 +1,16 @@
+# ##################################################################################
+# 
+# CARNOVO: Technical text
+# Author: Irantzu mesanza
+# Installation and usage: 
+# Download repository and install node modules using "npm install"
+# View in your browser using "ng serve" and accessing localhost:4200
+#
+# #################################################################################
+
+
+
+
 # Carnovo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
