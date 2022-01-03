@@ -33,4 +33,47 @@
             margin-bottom: map-get($spacers, 3 );
         }
     }
+    .social {
+        @include display (flex);
+        a {
+            font-size: 0;
+        }
+        [class*="icon-"] {
+            @include display(block);
+            background: $white;
+            width: map-get($spacers, 4 );
+            height: map-get($spacers, 4 );
+            border-radius: 100vh;
+            margin-right: map-get($spacers, 2 );
+            &::before {
+                content: "";
+                display: block;
+                width: map-get($spacers, 4 );
+                height: map-get($spacers, 4 );
+                background-size: map-get($spacers, 4 );
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        .icon-facebook {
+            &:before {
+                background-image: url('/assets/img/social-icons/facebook.svg');
+            }
+        }
+        .icon-twitter {
+            &:before {
+                background-image: url('/assets/img/social-icons/twitter.svg');
+            }
+        }
+        .icon-instagram {
+            &:before {
+                background-image: url('/assets/img/social-icons/instagram.svg');
+            }
+        }
+        .icon-youtube {
+            &:before {
+                background-image: url('/assets/img/social-icons/youtube.svg');
+            }
+        }
+    }
 }
