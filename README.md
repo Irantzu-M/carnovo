@@ -1,7 +1,7 @@
 # ##################################################################################
 # 
 # CARNOVO: Technical text
-# Author: Irantzu mesanza
+# Author: Irantzu Mesanza
 # Installation and usage: 
 # Download repository and install node modules using "npm install"
 # View in your browser using "ng serve" and accessing localhost:4200
